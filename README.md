@@ -8,6 +8,10 @@
 In this code challenge you will build a ReactJS web app from the ground up. You have to setup a GraphQL client to query our GraphQL API endpoint https://fullstack-engineer-test-n4ouilzfna-uc.a.run.app/graphql. The API will return a book object. 
 More details on the challenge description can be found [here](https://github.com/ElloTechnology/full-stack-test#readme)
 
+# Demo
+I have a deployed my solution on [Netlify](https://www.netlify.com/)<br>
+click the following link to check my solution [https://ello-challenge.netlify.app/](https://ello-challenge.netlify.app/)
+
 
 # Table of contents
 * [Prerequisites](#Prerequisites)
@@ -23,7 +27,7 @@ More details on the challenge description can be found [here](https://github.com
 
 
 # Directory-Structure
-    ELLO_TECHNOLOGY_CHALLENGE
+    ello-challenge
     ├── public			             
     |   ├── index.html  
     |	└── favicon.ico  
