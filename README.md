@@ -40,7 +40,7 @@ click the following link to check my solution [https://ello-challenge.netlify.ap
     |   |       ├── Page.js
     |   |       └── Page.styles.js
     |	├── hooks
-    |   |   └── Page.styles.js 
+    |   |   └── usePageFetch.js 
     |   ├── api.js
     |   ├── App.js
     |   ├── GlobalStyles.js
