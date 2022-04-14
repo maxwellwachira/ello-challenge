@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Modal from 'styled-react-modal'
 
 export const Wrapper = styled.div`
     margin-top: 20px;
@@ -68,3 +69,28 @@ export const ButtonWrapper = styled.div`
     }
 
 `;
+
+export const StyledModal = Modal.styled`
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--white);
+  font-size: 30px;
+
+  button {
+    background: var(--darkGrey);
+    color:var(--white);
+    padding: 5px 10px;
+    margin: 15px;
+    font-size:15px;
+    border: var(--darkGrey);
+    cursor: pointer;
+
+    :hover {
+        opacity: 0.8;
+    }
+  }
+`
