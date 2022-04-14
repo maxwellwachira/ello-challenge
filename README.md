@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+<h1 align="center"><b>Full Stack Engineer Coding Challenge
+</b></h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://github.com/maxwellwachira/FastAPI-Mail.git)
 
-## Available Scripts
+# Description
 
-In the project directory, you can run:
+In this code challenge you will build a ReactJS web app from the ground up. You have to setup a GraphQL client to query our GraphQL API endpoint https://fullstack-engineer-test-n4ouilzfna-uc.a.run.app/graphql. The API will return a book object. 
+More details on the challenge description can be found [here](https://github.com/ElloTechnology/full-stack-test#readme)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Table of contents
+* [Prerequisites](#Prerequisites)
+* [Directory Structure](#Directory-Structure)
+* [Running Locally](#Setting-up-Local-Environment)
+* [Acknowledgement](#Acknowledgement)
+* [License](#License)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Prerequisites
+- [Node JS Installed ](https://nodejs.org/en/download/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Directory-Structure
+    ELLO_TECHNOLOGY_CHALLENGE
+    ├── public			             
+    |   ├── index.html  
+    |	└── favicon.ico  
+    ├── src
+    |   ├── components
+    |   |   ├── Header 
+    |   |   |   ├── Header.js
+    |   |   |   └── Header.styles.js
+    |   |   └── Page
+    |   |       ├── Page.js
+    |   |       └── Page.styles.js
+    |	├── hooks
+    |   |   └── Page.styles.js 
+    |   ├── api.js
+    |   ├── App.js
+    |   ├── GlobalStyles.js
+    |   └── index.js
+	├── .gitignore   
+	├── package-lock.json               
+    ├── package.json		 
+	└── README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Setting-up-Local-Environment
+### Step 1
+clone the repository and navigate to the project directory
+```bash
+git clone https://github.com/maxwellwachira/ello-challenge
+cd ello_challenge/
+```
+### Step 2
+Check package.json file and ensure scripts are notated as below:
+```bash
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+```
+### Step 3
+Delete the node_modules folder and any 'lock' files such as yarn.lock or package-lock.json if present.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Step 4
+Run npm install
+```bash
+npm install
+```
+### Step 5
+final step
+```bash
+npm run start
+```
 
-### `npm run eject`
+# Acknowledgement
+Special thanks to @James Mwangi for the interesting challenge
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## <b>License</b>
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](LICENSE)
