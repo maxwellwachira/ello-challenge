@@ -31,35 +31,42 @@ export const usePageFetch = () => {
 
     //Function to handle onClick Text events
     const textClick = (index, contentArray, result) => {
-        toggleModal();
+        toggleModal(); //open Modal
         let text = result.content;
         let position = 0;
         //array to hold all the indices where there is a match between the string and text
         let positionArray = [];
+
         let tokensArray =  result.tokens;
-        
+        let word = contentArray[index];
+
         //Loop to add indices to the Position array
         for (let i = 0; i < text.split(" ").length; i++){
-            position = text.indexOf(`${contentArray[index]}`, (position + 1));
+            position = text.indexOf(`${word}`, (position + 1));
             positionArray.push(position);
         }
 
-        tokensArray.forEach(element => {   
+        tokensArray.forEach(element => {  
+            //One of the pages has a '-' (dash) which is not tokenized
+            if(word === '-'){
+                setText('-');
+            }
             positionArray.forEach(position => {
+                //check if word starts with a quote then increment position 
+                if (word.split("")[0] === '"'){
+                    position++;
+                }
                 //check if the index matches to the first value of the position list
                 if(position === element.position[0]){
                     var valueLength = element.position[1] - element.position[0];
-                    //Handle Punctuation
-                    const punctuation = ['.', ',', '!', '"'];
-                    punctuation.every(el => {
-                        var punctuated = contentArray[index].includes(el)
-                        if (punctuated) {
-                            valueLength = valueLength + 1;
-                           return false;
-                        }
-                    });
+
+                    //Handle Punctuation using Regex      
+                    let matches = word.match(/[!"#$%&()*+,-./:;<=>?@[\]^_`{|}~]/g);
+                    var punctuationCount = matches ? matches.length : 0;
+                   
+                    valueLength = valueLength + punctuationCount;
                     //check if the length matches 
-                    if (valueLength === contentArray[index].length){
+                    if (valueLength === word.length){
                         setText(element.value);
                     }
                 }      
@@ -89,6 +96,6 @@ export const usePageFetch = () => {
         fetchData();    
     }, []);
 
-    return {pages, loading, pageNumber, text,isOpen, textClick, prevClick, nextClick, toggleModal}
+    return {pages, loading, pageNumber, text, isOpen, textClick, prevClick, nextClick, toggleModal}
 
 }
