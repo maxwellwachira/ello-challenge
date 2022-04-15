@@ -24,11 +24,10 @@ const Page = () => {
             <Content>
               {results.map((result, index) => {
                 var contentArray = result.content.split(" ");
-                const firstIndex = index;
                 return ( 
-                  <p key={firstIndex}>{
+                  <p key={index}>{
                       contentArray.map((el, index) => (
-                          <TextButton key = {`${firstIndex}${index}`} onClick = {e => textClick(index , contentArray, result)}>{
+                          <TextButton key = {index} onClick = {e => textClick(index , contentArray, result)}>{
                           el + " "
                           }</TextButton>)
                       )}
